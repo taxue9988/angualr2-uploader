@@ -1,0 +1,30 @@
+<hr> 嵌套
+<hr>
+<uploader-ui-base [inputClass]="class" [controlName]="controlName" [accept]="accept" [multiple]="multiple" (changed)="onChange($event)"
+    [file-list]="files">
+    <uploader-file-list [control-name]="controlName" [file-list]="files" (reselect)="reselect($event)"></uploader-file-list>
+</uploader-ui-base>
+<!--需要在uploader-ui-base.component.html中写uploader-file-list -->
+<uploader-ui-base [inputClass]="class" [controlName]="avatarFile" [accept]="accept" [multiple]="multiple" (changed)="onChange($event)"
+    [file-list]="avatar">
+</uploader-ui-base>
+
+
+<hr> 预览列表与上传为兄弟元素
+<hr>
+<uploader-ui-base [inputClass]="class" [controlName]="controlName" [accept]="accept" [multiple]="multiple" (changed)="onChange($event)">
+</uploader-ui-base>
+<uploader-file-list [control-name]="controlName" [file-list]="files" (reselect)="reselect($event)"></uploader-file-list>
+
+<uploader-ui-base [inputClass]="class" [controlName]="avatarFile" [accept]="accept" [multiple]="multiple" (changed)="onChange($event)">
+</uploader-ui-base>
+<uploader-file-list [control-name]="avatarFile" [file-list]="avatar" (reselect)="reselect($event)"></uploader-file-list>
+
+
+<hr> 点击图片选择上传并替换
+<hr>
+
+<uploader-ui-base [inputClass]="class" [controlName]="replace_pic" [accept]="accept" [multiple]="multiple" (changed)="onChange($event)">
+</uploader-ui-base>
+<uploader-file-list [control-name]="replace_pic" [file-list]="replacePic" (reselect)="reselect($event)"></uploader-file-list>
+

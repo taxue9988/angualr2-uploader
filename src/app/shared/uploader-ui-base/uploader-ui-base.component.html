@@ -1,0 +1,10 @@
+<div class="file_picker">
+    <input #inputFile type="file" [attr.name]="controlName" [attr.id]="controlName" (change)="onChange($event)" [attr.multiple]="multiple"
+        [attr.class]="inputClass" [attr.accept]="accept">
+    <label for="{{controlName}}">上传</label>
+
+    <button type="button" (click)="select()">555525</button>
+</div>
+<ng-content></ng-content>
+<!--
+<uploader-file-list [file-list]="fileList" (reselect)="reselect($event)"></uploader-file-list>-->
